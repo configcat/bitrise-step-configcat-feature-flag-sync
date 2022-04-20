@@ -1,0 +1,61 @@
+title: |-
+  ConfigCat Scan Repository
+summary: |
+  Scan ConfigCat feature flag and setting usages
+description: |
+  Scan ConfigCat feature flag and setting usages in your source code and uploads the found code references to ConfigCat.
+website: https://github.com/configcat/bitrise-step-configcat-scan-repository
+source_code_url: https://github.com/configcat/bitrise-step-configcat-scan-repository
+support_url: https://github.com/configcat/bitrise-step-configcat-scan-repository/issues
+host_os_tags:
+  - osx-10.10
+  - ubuntu-16.04
+
+type_tags:
+  - utility
+
+is_requires_admin_user: true
+is_always_run: false
+is_skippable: false
+
+deps:
+  brew:
+  - name: curl
+  apt_get:
+  - name: curl
+
+toolkit:
+  bash:
+    entry_file: step.sh
+
+inputs:
+  - api_host: api.configcat.com
+    opts:
+      title: "ConfigCat Management API host"
+      summary: "Full domain name without protocol e.g. 'api.configcat.com'"
+      is_required: true
+  - api_user: $CONFIGCAT_API_USER
+    opts:
+      title: "ConfigCat Management API basic authentication username"
+      is_required: true
+      is_sensitive: true
+  - api_pass: $CONFIGCAT_API_PASS
+    opts:
+      title: "ConfigCat Management API basic authentication password"
+      is_required: true
+      is_sensitive: true
+  - config_id:
+    opts:
+      title: "ID of the ConfigCat config to scan against"
+      summary: "[More info](https://configcat.com/docs/advanced/code-references/overview/#config-id)"
+      is_required: true
+      is_sensitive: true
+  - line_count: 4
+    opts:
+      title: "Context line count before and after the reference line (min: 1, max: 10)"
+  - sub_folder:
+    opts:
+      title: "Sub-folder to scan, relative to the repository root folder"
+  - verbose: false
+    opts:
+      title: "Turns on detailed logging"

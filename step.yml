@@ -1,9 +1,21 @@
 title: |-
   ConfigCat Scan Repository
 summary: |
-  Scan ConfigCat feature flag and setting usages
-description: |
-  Scan ConfigCat feature flag and setting usages in your source code and uploads the found code references to ConfigCat.
+  Scan ConfigCat feature flag and setting usages in your source code and uploads the found code references to [ConfigCat](https://configcat.com).
+description: |-
+  Scan ConfigCat feature flag and setting usages in your source code and uploads the found code references to [ConfigCat](https://configcat.com).  
+  This feature makes the erasement of technical debt easier, as it can show which repositories reference your
+  feature flags and settings in one centralized place on your [Dashboard](https://app.configcat.com/).  
+  
+  ### Configuring the Step
+
+  * Create a new [ConfigCat Management API credential](https://app.configcat.com/my-account/public-api-credentials) and store its values in secret
+  environment variables with the following names: `CONFIGCAT_API_USER`, `CONFIGCAT_API_PASS`.
+  * [Get the ID of your ConfigCat Config](https://configcat.com/docs/advanced/code-references/overview#config-id) that you want to associate with your repository
+  and use it as the `config_id` input. The scanner will use this ID to determine which feature flags and settings to search for in your source code.
+
+  For more information about repository scanning, see our [documentation](https://configcat.com/docs/advanced/code-references/overview).  
+  If you would like help with this pipe, or you have an issue or feature request, [let us know](https://configcat.com/support).
 website: https://github.com/configcat/bitrise-step-configcat-scan-repository
 source_code_url: https://github.com/configcat/bitrise-step-configcat-scan-repository
 support_url: https://github.com/configcat/bitrise-step-configcat-scan-repository/issues

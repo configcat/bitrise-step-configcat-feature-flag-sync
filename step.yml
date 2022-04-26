@@ -1,24 +1,24 @@
 title: |-
-  ConfigCat Scan Repository
+  ConfigCat Feature Flags
 summary: |
-  Scan ConfigCat feature flag and setting usages in your source code and uploads the found code references to [ConfigCat](https://configcat.com).
+  Scans the source code for feature flags and uploads the references to the [ConfigCat Dashboard](https://app.configcat.com/).
 description: |-
-  Scan ConfigCat feature flag and setting usages in your source code and uploads the found code references to [ConfigCat](https://configcat.com).  
-  This feature makes the erasement of technical debt easier, as it can show which repositories reference your
-  feature flags and settings in one centralized place on your [Dashboard](https://app.configcat.com/).  
-  
+  This Step helps you get rid of technical debt by scanning the source code and highlighting the feature flag usages for each feature flag on the the [ConfigCat Dashboard](https://app.configcat.com/).
+
+  ![Code references](https://configcat.com/docs/assets/cli/scan/scan_report.png)
+
   ### Configuring the Step
 
-  * Create a new [ConfigCat Management API credential](https://app.configcat.com/my-account/public-api-credentials) and store its values in secret
-  environment variables with the following names: `CONFIGCAT_API_USER`, `CONFIGCAT_API_PASS`.
-  * [Get the ID of your ConfigCat Config](https://configcat.com/docs/advanced/code-references/overview#config-id) that you want to associate with your repository
-  and use it as the `config_id` input. The scanner will use this ID to determine which feature flags and settings to search for in your source code.
+  1. Log in to [ConfigCat](https://app.configcat.com/)
+  1. Create new [ConfigCat Management API credentials](https://app.configcat.com/my-account/public-api-credentials/) 
+  1. Store your credentials in environment variables under the following names: `CONFIGCAT_API_USER`, `CONFIGCAT_API_PASS`.
+  1. [Get the ID of your ConfigCat config](https://configcat.com/docs/advanced/code-references/overview#config-id) that you want to associate your repository with and add it as the `config_id` input. The Step will use the config ID to determine which feature flags to search for in the source code.
 
-  For more information about repository scanning, see our [documentation](https://configcat.com/docs/advanced/code-references/overview).  
-  If you would like help with this pipe, or you have an issue or feature request, [let us know](https://configcat.com/support).
-website: https://github.com/configcat/bitrise-step-configcat-scan-repository
-source_code_url: https://github.com/configcat/bitrise-step-configcat-scan-repository
-support_url: https://github.com/configcat/bitrise-step-configcat-scan-repository/issues
+  For more information about code reference scanning, see the [documentation](https://configcat.com/docs/advanced/code-references/overview/).
+
+website: https://configcat.com/
+source_code_url: https://github.com/configcat/bitrise-step-configcat-scan-repository/
+support_url: https://configcat.com/support/
 host_os_tags:
   - osx-10.10
   - ubuntu-16.04
@@ -32,9 +32,9 @@ is_skippable: false
 
 deps:
   brew:
-  - name: curl
+    - name: curl
   apt_get:
-  - name: curl
+    - name: curl
 
 toolkit:
   bash:

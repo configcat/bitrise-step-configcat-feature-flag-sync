@@ -63,7 +63,6 @@ inputs:
       title: "ConfigCat Config ID"
       summary: "The [config ID](https://configcat.com/docs/advanced/code-references/overview#config-id) tells the step which feature flags it should search for in your source code."
       is_required: true
-      is_sensitive: true
   - line_count: 4
     opts:
       title: "Code snippet line count before and after the reference line (min: 1, max: 10)"

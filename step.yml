@@ -11,7 +11,7 @@ description: |-
 
   1. Log in to [ConfigCat](https://app.configcat.com/)
   1. Create new [ConfigCat Management API credentials](https://app.configcat.com/my-account/public-api-credentials/) 
-  1. Store your credentials in environment variables under the following names: `CONFIGCAT_API_USER`, `CONFIGCAT_API_PASS`.
+  1. Store your credentials in secret environment variables under the following names: `CONFIGCAT_API_USER`, `CONFIGCAT_API_PASS`.
   1. [Get the ID of your ConfigCat config](https://configcat.com/docs/advanced/code-references/overview#config-id) that you want to associate your repository with and add it as the `config_id` input. The Step will use the config ID to determine which feature flags to search for in the source code.
 
   For more information about code reference scanning, see the [documentation](https://configcat.com/docs/advanced/code-references/overview/).

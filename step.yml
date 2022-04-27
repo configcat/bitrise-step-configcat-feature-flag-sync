@@ -1,5 +1,5 @@
 title: |-
-  ConfigCat Feature Flags
+  ConfigCat Feature Flag Sync
 summary: |
   Scans the source code for feature flags and uploads the references to the [ConfigCat Dashboard](https://app.configcat.com/).
 description: |-

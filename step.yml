@@ -12,7 +12,7 @@ description: |-
   1. Log in to [ConfigCat](https://app.configcat.com/)
   1. Create new [ConfigCat Management API credentials](https://app.configcat.com/my-account/public-api-credentials/) 
   1. Store your credentials in the following Bitrise secret environment variables: `CONFIGCAT_API_USER`, `CONFIGCAT_API_PASS`.
-  1. [Get the ID of your ConfigCat config](https://configcat.com/docs/advanced/code-references/overview#config-id) that you want to associate your repository with and add it as the `config_id` input. The Step will use the config ID to determine which feature flags to search for in the source code.
+  1. Add your [ConfigCat config ID](https://configcat.com/docs/advanced/code-references/overview#config-id) to the `ID of the ConfigCat config to scan against` input variable of this step (`config_id` in bitrise.yml). The config ID tells the script which feature flags it should search for in your source code.```
 
   For more information about code reference scanning, see the [documentation](https://configcat.com/docs/advanced/code-references/overview/).
 

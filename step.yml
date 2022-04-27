@@ -10,9 +10,9 @@ description: |-
   ### Configuring the Step
 
   1. Log in to [ConfigCat](https://app.configcat.com/)
-  1. Create new [ConfigCat Management API credentials](https://app.configcat.com/my-account/public-api-credentials/) 
+  1. Create new [ConfigCat Public Management API credentials](https://app.configcat.com/my-account/public-api-credentials/) 
   1. Store your credentials in the following Bitrise secret environment variables: `CONFIGCAT_API_USER`, `CONFIGCAT_API_PASS`.
-  1. Add your [ConfigCat config ID](https://configcat.com/docs/advanced/code-references/overview#config-id) to the `ID of the ConfigCat config to scan against` input variable of this step (`config_id` in bitrise.yml). The config ID tells the script which feature flags it should search for in your source code.```
+  1. Add your [ConfigCat config ID](https://configcat.com/docs/advanced/code-references/overview#config-id) to the `ConfigCat Config ID` input variable of this step (`configcat_config_id` in bitrise.yml). The config ID tells the step which feature flags it should search for in your source code.
 
   For more information about code reference scanning, see the [documentation](https://configcat.com/docs/advanced/code-references/overview/).
 
@@ -41,33 +41,37 @@ toolkit:
     entry_file: step.sh
 
 inputs:
-  - api_host: api.configcat.com
+  - configcat_api_host: api.configcat.com
     opts:
-      title: "ConfigCat Management API host"
+      title: "ConfigCat Public Management API host"
       summary: "Full domain name without protocol e.g. 'api.configcat.com'"
       is_required: true
-  - api_user: $CONFIGCAT_API_USER
+  - configcat_api_user: $CONFIGCAT_API_USER
     opts:
-      title: "ConfigCat Management API basic authentication username"
+      title: "ConfigCat Public Management API basic authentication username"
+      summary: "Create your ConfigCat Public Management API credentials [here](https://app.configcat.com/my-account/public-api-credentials/)"
       is_required: true
       is_sensitive: true
-  - api_pass: $CONFIGCAT_API_PASS
+  - configcat_api_pass: $CONFIGCAT_API_PASS
     opts:
-      title: "ConfigCat Management API basic authentication password"
+      title: "ConfigCat Public Management API basic authentication password"
       is_required: true
       is_sensitive: true
-  - config_id:
+  - configcat_config_id:
     opts:
-      title: "ID of the ConfigCat config to scan against"
-      summary: "[More info](https://configcat.com/docs/advanced/code-references/overview/#config-id)"
+      title: "ConfigCat Config ID (`configcat_config_id`)"
+      summary: "The [config ID](https://configcat.com/docs/advanced/code-references/overview#config-id) tells the step which feature flags it should search for in your source code."
       is_required: true
       is_sensitive: true
   - line_count: 4
     opts:
-      title: "Context line count before and after the reference line (min: 1, max: 10)"
+      title: "Code snippet line count before and after the reference line (min: 1, max: 10)"
+      summary: "The ConfigCat Dashboard will display a few lines of your source code around the feature flag reference. You can set here how many lines of code you want to include before and after the reference line."
   - sub_folder:
     opts:
       title: "Sub-folder to scan, relative to the repository root folder"
+      summary: "e.g. 'subfolder/to/scan'"
   - verbose: false
     opts:
       title: "Turns on detailed logging"
+      summary: "`true` or `false`"

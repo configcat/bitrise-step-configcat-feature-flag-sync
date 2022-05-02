@@ -33,9 +33,9 @@ is_skippable: false
 
 deps:
   brew:
-    - name: curl
+  - name: curl
   apt_get:
-    - name: curl
+  - name: curl
 
 toolkit:
   bash:

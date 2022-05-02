@@ -18,7 +18,7 @@ description: |-
   ![Code references](https://configcat.com/docs/assets/cli/scan/scan_report.png)
 
 website: https://configcat.com/
-source_code_url: https://github.com/configcat/bitrise-step-configcat-scan-repository/
+source_code_url: https://github.com/configcat/bitrise-step-configcat-feature-flag-sync/
 support_url: https://configcat.com/support/
 host_os_tags:
   - osx-10.10

@@ -1,6 +1,7 @@
 # ConfigCat Feature Flag Sync - Bitrise Step
 
-ConfigCat's repository scanner Bitrise Step. ConfigCat is a hosted feature flag service: https://configcat.com. Manage feature toggles across frontend, backend, mobile, desktop apps. Alternative to LaunchDarkly. Management app + feature flag SDKs. 
+This Bitrise Step helps you get rid of technical debt by scanning the source code and highlighting the feature flag usages for each feature flag on the [ConfigCat Dashboard](https://app.configcat.com/). 
+ConfigCat is a hosted feature flag service: https://configcat.com. Manage feature toggles across frontend, backend, mobile, desktop apps. Alternative to LaunchDarkly. Management app + feature flag SDKs. 
 
 ## How to use this Step
 

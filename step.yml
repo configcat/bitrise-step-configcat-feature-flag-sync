@@ -46,17 +46,6 @@ inputs:
       title: "ConfigCat Public Management API host"
       summary: "Full domain name without protocol e.g. 'api.configcat.com'"
       is_required: true
-  - configcat_api_user: $CONFIGCAT_API_USER
-    opts:
-      title: "ConfigCat Public Management API basic authentication username"
-      summary: "Create your ConfigCat Public Management API credentials [here](https://app.configcat.com/my-account/public-api-credentials/)"
-      is_required: true
-      is_sensitive: true
-  - configcat_api_pass: $CONFIGCAT_API_PASS
-    opts:
-      title: "ConfigCat Public Management API basic authentication password"
-      is_required: true
-      is_sensitive: true
   - configcat_config_id:
     opts:
       title: "ConfigCat Config ID"
@@ -70,7 +59,10 @@ inputs:
     opts:
       title: "Sub-folder to scan, relative to the repository root folder"
       summary: "e.g. 'subfolder/to/scan'"
-  - verbose: false
+  - verbose: "false"
     opts:
-      title: "Turns on detailed logging"
-      summary: "`true` or `false`"
+      title: "Detailed logging"
+      summary: "Turns on or off detailed logging"
+      value_options:
+      - "false"
+      - "true"

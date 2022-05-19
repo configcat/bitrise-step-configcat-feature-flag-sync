@@ -9,7 +9,7 @@ app:
   - CONFIGCAT_API_PASS: $CONFIGCAT_API_PASS
   # If you want to share this step into a StepLib
   - BITRISE_STEP_ID: configcat-feature-flag-sync
-  - BITRISE_STEP_VERSION: "0.0.2"
+  - BITRISE_STEP_VERSION: "0.0.3"
   - BITRISE_STEP_GIT_CLONE_URL: https://github.com/configcat/bitrise-step-configcat-feature-flag-sync.git
   - MY_STEPLIB_REPO_FORK_GIT_URL: $MY_STEPLIB_REPO_FORK_GIT_URL
   - GIT_REPOSITORY_URL: $BITRISE_STEP_GIT_CLONE_URL

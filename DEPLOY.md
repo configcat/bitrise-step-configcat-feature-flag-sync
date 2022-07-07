@@ -3,7 +3,7 @@
 1. Fork [bitrise-steplib](https://github.com/bitrise-io/bitrise-steplib) repository
 2. Create a `.bitrise.secrets.yml` with env secrets `MY_STEPLIB_REPO_FORK_GIT_URL` and  
    [ConfigCat Management API credential](https://app.configcat.com/my-account/public-api-credentials) (`CONFIGCAT_API_USER`, `CONFIGCAT_API_PASS`)  
-    > Example:
+    > Example `.bitrise.secrets.yml`:
     > ```
     > envs:
     > - MY_STEPLIB_REPO_FORK_GIT_URL: git@github.com:user/bitrise-steplib.git

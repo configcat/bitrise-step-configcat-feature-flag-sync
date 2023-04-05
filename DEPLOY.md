@@ -10,12 +10,16 @@
     > - CONFIGCAT_API_USER: 00000000-0000-0000-0000-000000000000
     > - CONFIGCAT_API_PASS: 000000000000000000000000000000000000
     > ```   
-3. Run tests
+3. Install [bitrise CLI](https://github.com/bitrise-io/bitrise)
+   ```bash
+   brew install bitrise
+   ```
+4. Run tests
    ```bash
    bitrise run test
    ```
-3. Increase the `BITRISE_STEP_VERSION` version in `bitrise.yml`.
-4. Commit & Push
+5. Increase the `BITRISE_STEP_VERSION` version in `bitrise.yml`.
+6. Commit & Push
 ## Publish
 Use the **same version** for the git tag as in `bitrise.yml`.
 1. Create git tag

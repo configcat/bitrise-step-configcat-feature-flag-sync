@@ -14,7 +14,7 @@
    ```bash
    brew install bitrise
    ```
-5. Run tests
+4. Run tests
    ```bash
    bitrise run test
    ```

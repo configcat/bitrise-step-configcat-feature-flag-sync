@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-curl -fsSL "https://raw.githubusercontent.com/configcat/cli/main/scripts/install.sh" | bash -s -- -v=1.7.1
+curl -fsSL "https://raw.githubusercontent.com/configcat/cli/main/scripts/install.sh" | bash -s -- -v=1.8.0
 
 export CONFIGCAT_API_HOST=${configcat_api_host}
 

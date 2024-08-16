@@ -57,6 +57,15 @@ inputs:
     opts:
       title: "Code snippet line count before and after the reference line (min: 1, max: 10)"
       summary: "The ConfigCat Dashboard will display a few lines of your source code around the feature flag reference. You can set here how many lines of code you want to include before and after the reference line."
+  - exclude_keys: ""
+    opts:
+      title: "List of feature flag keys that must be excluded from the scan report."
+  - alias_patterns: ""
+    opts:
+      title: "Comma delimited list of custom regex patterns used to search for additional aliases."
+  - usage_patterns: ""
+    opts:
+      title: "Comma delimited list of custom regex patterns that describe additional feature flag key usages."
   - sub_folder:
     opts:
       title: "Sub-folder to scan, relative to the repository root folder"

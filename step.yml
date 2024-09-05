@@ -64,11 +64,11 @@ inputs:
   - alias_patterns: ""
     opts:
       title: "Comma delimited list of custom regex patterns used to search for additional aliases"
-      summary: "The regex pattern must include the CC_KEY placeholder that represents the actual feature flag or setting key in your code e.g. '(\w+) = :CC_KEY,const (\w+) = feature_flags\.enabled\(:CC_KEY\)'."
+      summary: "The regex pattern must include the CC_KEY placeholder that represents the actual feature flag or setting key in your code e.g. '(\\w+) = :CC_KEY,const (\\w+) = feature_flags\\.enabled\\(:CC_KEY\\)'."
   - usage_patterns: ""
     opts:
       title: "Comma delimited list of custom regex patterns that describe additional feature flag key usages"
-      summary: "The regex pattern must include the CC_KEY placeholder that represents the actual feature flag or setting key in your code e.g. 'feature_flags\.enabled\(:CC_KEY\)'."
+      summary: "The regex pattern must include the CC_KEY placeholder that represents the actual feature flag or setting key in your code e.g. 'feature_flags\\.enabled\\(:CC_KEY\\)'."
   - sub_folder:
     opts:
       title: "Sub-folder to scan, relative to the repository root folder"

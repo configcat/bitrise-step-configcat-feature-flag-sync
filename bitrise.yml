@@ -21,7 +21,7 @@ workflows:
     steps:
     - path::./:
         inputs:
-        - configcat_config_id: '08d553cd-9c14-3013-e7f9-536ad1d9d8a2'
+        - configcat_config_id: '08dcbd44-0654-4a0f-8598-11f50d50e04e'
         - sub_folder: sample
 
   # ----------------------------------------------------------------
